@@ -1,0 +1,5 @@
+# https://help.github.com/articles/using-ssh-over-the-https-port/
+#~/.ssh/config
+Host github.com
+  Hostname ssh.github.com
+  Port 443

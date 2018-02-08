@@ -1,0 +1,25 @@
+#new repo - skip to 'NOTE' if existing and just adding new push remote
+git init
+git add -A
+git commit -m ""
+
+#primary repo 
+git remote add origin git@github.com:username/somerepo.git
+
+#NOTE : skip above and justr do something like below
+#if just adding a new push remote
+
+#add new named remote
+git remote add all git@github.com:username/somerepo.git
+#add push urls to new remote
+git remote set-url --add --push all git@gitlab.com:username2/somerepo.git
+git remote set-url --add --push all git@github.com:username/somerepo.git
+
+#check them
+git remote -v
+#sample output
+>all	git@github.com:username/somerepo.git (fetch)
+>all	git@gitlab.com:username2/somerepo.git (push)
+>all	git@github.com:username/somerepo.git (push)
+>origin	git@github.com:username/somerepo.git (fetch)
+>origin	git@github.com:username/somerepo.git (push)
